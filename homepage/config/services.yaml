@@ -1,0 +1,124 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Services:
+    - Pi-hole:
+        href: https://pihole.rockslab.duckdns.org/admin
+        icon: pi-hole.png
+        widget:
+          type: pihole
+          url: http://10.0.10.10:8080
+          key: {{HOMEPAGE_VAR_PIHOLE_TOKEN}}
+          version: 6
+
+    - Speedtest Tracker:
+        href: https://speedtest.rockslab.duckdns.org
+        icon: si-speedtest-#141526
+        widget:
+          type: speedtest
+          url: http://10.0.10.10:8097
+          version: 2
+          key: {{HOMEPAGE_VAR_SPEEDTEST_TOKEN}}
+
+    - Portainer:
+        href: https://10.0.10.10:9443
+        icon: si-portainer-#13BEF9
+        widget:
+          type: portainer
+          url: https://10.0.10.10:9443
+          env: 3
+          key: {{HOMEPAGE_VAR_PORTAINER_TOKEN}}
+          allowInsecure: true
+
+    - Nginx Proxy Manager:
+        href: https://proxy.rockslab.duckdns.org
+        icon: nginx-proxy-manager.svg
+        widget:
+          type: npm
+          url: http://10.0.10.10:81
+          username: {{HOMEPAGE_VAR_NPM_USER}}
+          password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+
+    - Nextcloud:
+        href: https://nextcloud.rockslab.duckdns.org
+        icon: si-nextcloud-#0082C9
+        widget:
+          type: nextcloud
+          url: https://10.0.10.10:8444
+          username: {{HOMEPAGE_VAR_NEXTCLOUD_USER}}
+          password: {{HOMEPAGE_VAR_NEXTCLOUD_KEY}}
+
+    - qBittorrent:
+        href: https://qbittorrent.rockslab.duckdns.org
+        icon: qbittorrent.png
+        widget:
+          type: qbittorrent
+          url: http://10.0.10.10:8090
+          username: {{HOMEPAGE_VAR_QBITTORRENT_USER}}
+          password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+
+    - Jellyfin:
+        href: https://jellyfin.rockslab.duckdns.org
+        icon: jellyfin.png
+        widget:
+          type: jellyfin
+          url: http://10.0.10.10:8090
+          username: {{HOMEPAGE_VAR_QBITTORRENT_USER}}
+          password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+
+    - Tailscale:
+        href: https://login.tailscale.com/admin/machines
+        icon: tailscale.png
+        widget:
+          type: tailscale
+          deviceid: {{HOMEPAGE_VAR_TAILSCALE_DEVICE}}
+          key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}
+
+- Utilities:
+    - Vikunja:
+        href: https://vikunja.rockslab.duckdns.org
+        icon: vikunja.png
+        widget:
+          type: vikunja
+          url: http://10.0.10.10:3456
+          key: {{HOMEPAGE_VAR_VIKUNJA_KEY}}
+          enableTaskList: true
+          version: 2 
+
+    - Bookmarks:
+        href: https://bookmarks.rockslab.duckdns.org
+        icon: linkding.svg
+
+- Arr stack:
+    - Prowlarr:
+        href: https://prowlarr.rockslab.duckdns.org
+        icon: prowlarr.png
+        widget:
+          type: prowlarr
+          url: http://10.0.10.10:9696
+          key: {{HOMEPAGE_VAR_PROWLARR_TOKEN}}
+
+    - Radarr:
+        href: https://radarr.rockslab.duckdns.org
+        icon: radarr.png
+        widget:
+          type: radarr
+          url: http://10.0.10.10:7878
+          key: {{HOMEPAGE_VAR_RADARR_TOKEN}}
+
+    - Sonarr:
+        href: https://sonarr.rockslab.duckdns.org
+        icon: sonarr.png
+        widget:
+          type: sonarr
+          url: http://10.0.10.10:8989
+          key: {{HOMEPAGE_VAR_SONARR_TOKEN}}
+
+    - Bazarr:
+        href: https://bazarr.rockslab.duckdns.org
+        icon: bazarr.png
+        widget:
+          type: bazarr
+          url: http://10.0.10.10:6767
+          key: {{HOMEPAGE_VAR_BAZARR_TOKEN}}

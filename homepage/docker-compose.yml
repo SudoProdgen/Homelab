@@ -1,0 +1,14 @@
+services:
+  homepage:
+    container_name: homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - /srv/containers/homepage/config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /mnt/data:/mnt/data:ro
+
+    env_file:
+      - .env

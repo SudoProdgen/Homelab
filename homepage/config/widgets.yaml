@@ -1,0 +1,18 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+
+- datetime:
+    text_size: l
+    format:
+      timeStyle: short
+      hour12: true
+
+- resources:
+    cpu: true
+    memory: true
+    expanded: true
+    uptime: true
+    disk:
+      - /
+      - /mnt/data

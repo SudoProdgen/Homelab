@@ -1,0 +1,110 @@
+# ───────────────────────
+# 1. PATRONES GLOBALES
+# ───────────────────────
+
+# ENV / credenciales
+**/.env
+**/*.env
+
+# Bases de datos
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.db-shm
+**/*.db-wal
+
+# SSL / llaves / certificados
+**/*.key
+**/*.pem
+**/*.crt
+**/*.p12
+**/*.cer
+
+# Logs y temporales
+**/*.log
+**/*.log.*
+**/*.log.fault
+**/logs/
+**/log/
+**/cache/
+**/tmp/
+**/temp/
+
+# Backups
+**/Backups/scheduled/
+**/backup/*.zip
+
+# ASP.NET Data Protection Keys
+**/asp/*.xml
+**/DataProtection-Keys/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ───────────────────────
+# 2. CARPETAS POR CONTENEDOR
+#    (descomenta el que quieras trackear)
+# ───────────────────────
+
+# Pi-hole
+pihole/etc-pihole/**
+!pihole/etc-pihole/custom.list
+pihole/etc-dnsmasq.d/
+
+# Nginx Proxy Manager
+nginx-proxy-manager/data/
+nginx-proxy-manager/letsencrypt/
+
+# Portainer
+portainer/data/
+
+# Nextcloud
+nextcloud/config/
+
+# Home Assistant
+homeassistant/config/.storage/
+homeassistant/config/secrets.yaml
+homeassistant/config/home-assistant_v2.db
+homeassistant/config/home-assistant_v2.db-shm
+homeassistant/config/home-assistant_v2.db-wal
+homeassistant/config/home-assistant.log
+homeassistant/config/home-assistant.log.*
+homeassistant/config/.cache/
+
+# Speedtest Tracker
+speedtest-tracker/data/
+speedtest-tracker/config/
+
+# Linkding
+linkding/data/
+
+# Tailscale
+tailscale/state/
+tailscale/data/
+
+# Jellyfin
+jellyfin/config/data/
+jellyfin/config/cache/
+jellyfin/config/log/
+
+# Radarr
+radarr/config/
+
+# Sonarr
+sonarr/config/
+
+# Prowlarr
+prowlarr/config/
+
+# Bazarr
+bazarr/config/
+
+# qBittorrent
+qbittorrent/config/
+
+# Vikunja
+vikunja/db/
+
+# Homepage (comentado = se trackea)
+# homepage/config/

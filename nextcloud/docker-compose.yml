@@ -1,0 +1,15 @@
+services:
+  nextcloud:
+    container_name: nextcloud
+    image: lscr.io/linuxserver/nextcloud:latest
+    restart: unless-stopped
+    ports:
+      - 8444:443
+    volumes:
+      - /srv/containers/nextcloud/config:/config
+      - /mnt/data/nextcloud:/data
+      - /mnt/data/downloads:/downloads
+      - /mnt/data/media:/media
+
+    env_file:
+      - .env

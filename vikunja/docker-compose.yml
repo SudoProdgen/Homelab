@@ -1,0 +1,12 @@
+services:
+  vikunja:
+    container_name: vikunja
+    image: vikunja/vikunja:latest
+    restart: unless-stopped
+    ports:
+      - 3456:3456
+    volumes:
+      - /mnt/data/vikunja/files:/app/vikunja/files
+      - /mnt/data/vikunja/db:/db
+    env_file:
+      - .env

@@ -1,0 +1,13 @@
+- id: '1777323519341'
+  alias: New automation
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id: []
+  conditions: []
+  actions:
+  - action: wake_on_lan.send_magic_packet
+    metadata: {}
+    data:
+      broadcast_port: 9
+  mode: single

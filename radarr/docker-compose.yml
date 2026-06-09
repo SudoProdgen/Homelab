@@ -1,0 +1,12 @@
+services:
+  radarr:
+    container_name: radarr
+    image: lscr.io/linuxserver/radarr:latest
+    restart: unless-stopped
+    ports:
+      - 7878:7878
+    volumes:
+      - /srv/containers/radarr/config:/config
+      - /mnt/data:/data
+    env_file:
+      - .env

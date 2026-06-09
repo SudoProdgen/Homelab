@@ -1,0 +1,14 @@
+services:
+  qbittorrent:
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+      - 6881:6881
+      - 6881:6881/udp
+    volumes:
+      - /srv/containers/qbittorrent/config:/config
+      - /mnt/data:/data
+    env_file:
+      - .env
