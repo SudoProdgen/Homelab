@@ -1,12 +1,12 @@
 services:
   sonarr:
-    container_name: sonarr
+    container_name: ${NAME}
     image: lscr.io/linuxserver/sonarr:latest
     restart: unless-stopped
     ports:
-      - 8989:8989
+      - ${PORT}:8989
     volumes:
-      - /srv/containers/sonarr/config:/config
-      - /mnt/data:/data
+      - ${VOLUME_CONFIG}:/config
+      - ${VOLUME_DATA}:/data
     env_file:
       - .env

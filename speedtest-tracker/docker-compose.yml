@@ -1,11 +1,11 @@
 services:
   speedtest-tracker:
-    container_name: speedtest-tracker
+    container_name: ${NAME}
     image: lscr.io/linuxserver/speedtest-tracker:latest
     restart: unless-stopped
     ports:
-      - 8097:80
+      - ${PORT}:80
     volumes:
-      - /srv/containers/speedtest-tracker/config:/config
+      - ${VOLUME_CONFIG}:/config
     env_file:
       - .env

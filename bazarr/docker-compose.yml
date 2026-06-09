@@ -1,12 +1,12 @@
 services:
   bazarr:
-    container_name: bazarr
+    container_name: ${NAME}
     image: lscr.io/linuxserver/bazarr:latest
     restart: unless-stopped
     ports:
-      - 6767:6767
+      - ${PORT}:6767
     volumes:
-      - /srv/containers/bazarr/config:/config
-      - /mnt/data:/data
+      - ${VOLUME_CONFIG}:/config
+      - ${VOLUME_DATA}:/data
     env_file:
       - .env

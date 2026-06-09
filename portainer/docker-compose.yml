@@ -1,6 +1,6 @@
 services:
   portainer:
-    container_name: portainer
+    container_name: ${NAME}
     image: portainer/portainer-ce:sts
     restart: unless-stopped
     volumes:
@@ -8,7 +8,7 @@ services:
       - portainer_data:/data
     env_file: .env
     ports:
-      - 9443:9443
+      - ${PORT}:9443
 
 volumes:
   portainer_data:

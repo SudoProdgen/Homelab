@@ -1,11 +1,11 @@
 services:
   linkding:
-    container_name: linkding
+    container_name: ${NAME}
     image: sissbruecker/linkding:latest
     restart: unless-stopped
     ports:
       - 9091:9090
     volumes:
-      - /srv/containers/linkding/data:/etc/linkding/data
+      - ${VOLUME_DATA}:/etc/linkding/data
     env_file:
       - .env

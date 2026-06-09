@@ -1,13 +1,13 @@
 services:
   tailscale:
-    container_name: tailscale
+    container_name: ${NAME}
     image: tailscale/tailscale:latest
     restart: unless-stopped
     network_mode: host
     privileged: true
     command: tailscaled --tun=userspace-networking
     volumes:
-      - /srv/containers/tailscale/data:/var/lib/tailscale
+      - ${VOLUME_DATA}:/var/lib/tailscale
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - NET_ADMIN

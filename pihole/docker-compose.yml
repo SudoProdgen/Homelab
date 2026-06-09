@@ -1,15 +1,15 @@
 services:
   pihole:
-    container_name: pihole
+    container_name: ${NAME}
     image: pihole/pihole:latest
     restart: unless-stopped
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "8080:80/tcp"
+      - "${PORT1}:53/tcp"
+      - "${PORT2}:53/udp"
+      - "${PORT3}:80/tcp"
     env_file:
       - .env
     volumes:
-      - /srv/containers/pihole/etc-pihole:/etc/pihole
+      - ${VOLUME_ETC}:/etc/pihole
 
 
