@@ -22,11 +22,11 @@
           key: {{HOMEPAGE_VAR_SPEEDTEST_TOKEN}}
 
     - Portainer:
-        href: https://10.0.10.10:9443
+        href: https://portainer.rockslab.duckdns.org
         icon: si-portainer-#13BEF9
         widget:
           type: portainer
-          url: https://10.0.10.10:9443
+          url: https://portainer.rockslab.duckdns.org
           env: 3
           key: {{HOMEPAGE_VAR_PORTAINER_TOKEN}}
           allowInsecure: true
