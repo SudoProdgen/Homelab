@@ -3,12 +3,13 @@ services:
     container_name: ${NAME}
     image: portainer/portainer-ce:sts
     restart: unless-stopped
+    ports:
+      - ${PORT}:9443
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-    env_file: .env
-    ports:
-      - ${PORT}:9443
+    env_file:
+      - .env
 
 volumes:
   portainer_data:
